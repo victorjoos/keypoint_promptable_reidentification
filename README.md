@@ -385,14 +385,20 @@ I'll try to update the documentation regularly based on your questions.
 If you use this repository for your research or wish to refer to our method KPR, please use the following BibTeX entry:
 
 ```
-@misc{somers2024keypointpromptablereidentification,
-      title={Keypoint Promptable Re-Identification}, 
-      author={Vladimir Somers and Christophe De Vleeschouwer and Alexandre Alahi},
-      year={2024},
-      eprint={2407.18112},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2407.18112}, 
+@inproceedings{DBLP:conf/eccv/SomersAV24,
+  author       = {Vladimir Somers and
+                  Alexandre Alahi and
+                  Christophe De Vleeschouwer},
+  title        = {Keypoint Promptable Re-Identification},
+  booktitle    = {Computer Vision - {ECCV} 2024 - 18th European Conference, Milan, Italy,
+                  September 29-October 4, 2024, Proceedings, Part {LXXIX}},
+  series       = {Lecture Notes in Computer Science},
+  volume       = {15137},
+  pages        = {216--233},
+  publisher    = {Springer},
+  year         = {2024},
+  url          = {https://doi.org/10.1007/978-3-031-72986-7\_13},
+  doi          = {10.1007/978-3-031-72986-7\_13},
 }
 ```
 
