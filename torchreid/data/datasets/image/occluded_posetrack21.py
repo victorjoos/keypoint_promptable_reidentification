@@ -7,7 +7,7 @@ import re
 import cv2
 import pandas as pd
 import torch.nn.functional as F
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from torch.utils.data import Dataset
 from math import ceil
 from pathlib import Path
