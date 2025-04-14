@@ -875,7 +875,7 @@ class TrackingSet:
     video_metadatas: pd.DataFrame
     image_metadatas: pd.DataFrame
     detections_gt: pd.DataFrame
-    image_gt: pd.DataFrame = pd.DataFrame(columns=["video_id"])
+    image_gt: pd.DataFrame = field(default_factory=lambda: pd.DataFrame(columns=["video_id"]))
 
 
 class TrackingDataset(ABC):
