@@ -69,7 +69,7 @@ class KPRFeatureExtractor(object):
 
         # Build model
         if model is None:
-            model = build_model(cfg)
+            model = build_model(cfg, verbose=verbose)
 
         model.eval()
 
