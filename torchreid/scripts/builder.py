@@ -133,7 +133,7 @@ def reset_config(cfg, args):
     if args.job_id:
         cfg.project.job_id = args.job_id
 
-def build_config(args=None, config=None, config_path=None, display_diff=False):
+def build_config(args=None, config=None, config_path=None, display_diff=False, training_enabled=True):
     cfg = get_default_config()
     default_cfg_copy = cfg.clone()
 
@@ -207,12 +207,13 @@ def build_config(args=None, config=None, config_path=None, display_diff=False):
 
     # init save dir
     cfg.data.save_dir = os.path.join(cfg.data.save_dir, str(cfg.project.job_id))
-    os.makedirs(cfg.data.save_dir)
-    print(
-        "Save dir created at {}".format(
-            os.path.join(pathlib.Path().resolve(), cfg.data.save_dir)
+    if training_enabled:
+        os.makedirs(cfg.data.save_dir)
+        print(
+            "Save dir created at {}".format(
+                os.path.join(pathlib.Path().resolve(), cfg.data.save_dir)
+            )
         )
-    )
     return cfg
 
 
